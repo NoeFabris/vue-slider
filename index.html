@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Vue Slider</title>
+</head>
+<body>
+    <main>
+        <div class="container mg-top">
+            <div id="root" class="row">
+                <!-- <h1>{{indice}}</h1> -->
+                <span v-on:keyup.left="keysx"></span>
+                <span v-on:keyup.right="keydx"></span>
+                <aside class="col-md-2 box">
+                    <i @click='slidesx' class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+                </aside>
+                <section class="col-md-8 box">
+                    <img :src="img[indice]">
+                    <div class="col-md-4 col-md-offset-4 box-tondo">
+                        <!-- <button @click='dot0' class="dot">
+                            <div v-if="indice === 0" class="dot-blue"></div>
+                        </button> -->
+                        <button @click='dot0' v-if="indice === 0" class="dot dot-blue"></button>
+                        <button @click='dot0' v-else class="dot"></button>
+
+                        <button @click='dot1' v-if="indice === 1" class="dot dot-blue"></button>
+                        <button @click='dot1' v-else class="dot"></button>
+
+                        <button @click='dot2' v-if="indice === 2" class="dot dot-blue"></button>
+                        <button @click='dot2' v-else class="dot"></button>
+
+                        <button @click='dot3' v-if="indice === 3" class="dot dot-blue"></button>
+                        <button @click='dot3' v-else class="dot"></button>
+                    </div>
+                </section>
+                <aside class="col-md-2 box">
+                    <i @click='slidedx'class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
