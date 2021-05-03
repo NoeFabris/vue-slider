@@ -33,6 +33,10 @@ var app = new Vue(
         },
         mounted() {
             document.querySelector('.row').focus()
+            
+            setInterval(() => {
+                this.slidedx()
+            }, 5000)
         }
     }
 )

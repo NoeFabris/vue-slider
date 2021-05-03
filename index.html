@@ -24,20 +24,22 @@
                 <section class="col-md-8 box">
                     <img :src="img[indice]">
                     <div class="col-md-4 col-md-offset-4 box-tondo">
-                        <!-- <button @click='dot0' class="dot">
-                            <div v-if="indice === 0" class="dot-blue"></div>
-                        </button> -->
-                        <button @click='dot0' v-if="indice === 0" class="dot dot-blue"></button>
+
+                        <button @click='dot0' v-if="indice === 0" class="dot dotblue"></button>
                         <button @click='dot0' v-else class="dot"></button>
 
-                        <button @click='dot1' v-if="indice === 1" class="dot dot-blue"></button>
+                        <button @click='dot1' v-if="indice === 1" class="dot dotblue"></button>
                         <button @click='dot1' v-else class="dot"></button>
 
-                        <button @click='dot2' v-if="indice === 2" class="dot dot-blue"></button>
+                        <button @click='dot2' v-if="indice === 2" class="dot dotblue"></button>
                         <button @click='dot2' v-else class="dot"></button>
 
-                        <button @click='dot3' v-if="indice === 3" class="dot dot-blue"></button>
+                        <button @click='dot3' v-if="indice === 3" class="dot dotblue"></button>
                         <button @click='dot3' v-else class="dot"></button>
+
+                        <!-- Soluzione di florian -->
+
+                        <!-- <button class="dot" :class='{dotblue: indice === index}' :data-index='index' v-for='(img, index) in img' @click='indice = index'></button> -->
                     </div>
                 </section>
                 <aside class="col-md-2 box">
