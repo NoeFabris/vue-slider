@@ -29,19 +29,10 @@ var app = new Vue(
             },
             dot3 : function() {
                 this.indice = 3
-            },
-            keysx: function(event) {
-                this.indice --
-                if (this.indice < 0) {
-                    this.indice = 3
-                }
-            },
-            keydx: function(event) {
-                this.indice ++
-                if (this.indice > 3) {
-                    this.indice = 0
-                }
             }
+        },
+        mounted() {
+            document.querySelector('.row').focus()
         }
     }
 )

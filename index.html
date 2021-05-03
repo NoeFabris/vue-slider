@@ -12,11 +12,12 @@
 </head>
 <body>
     <main>
-        <div class="container mg-top">
-            <div id="root" class="row">
+        <h1 class="text-center">Img Slider</h1>
+        <div class="container">
+            <div id="root" class="row" tabindex="-1" @keyup.left="slidesx" @keyup.right="slidedx">
                 <!-- <h1>{{indice}}</h1> -->
-                <span v-on:keyup.left="keysx"></span>
-                <span v-on:keyup.right="keydx"></span>
+                <span ></span>
+                <span ></span>
                 <aside class="col-md-2 box">
                     <i @click='slidesx' class="fa fa-arrow-circle-left" aria-hidden="true"></i>
                 </aside>
